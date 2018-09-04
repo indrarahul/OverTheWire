@@ -25,5 +25,70 @@ On doing ``` $file data.txt``` we get ```$data.txt: ASCII text```. Hint is this 
 
 ```$file data```
 
-```$data: gzip compressed data, was "data2.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix```
+```data: gzip compressed data, was "data2.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from 
+Unix
+```
+From here it takes time. You basically have to do ```$file file_name``` check the file, rename it and unzip/untar/unbiz2/ungzip using proper tools.
+
+so let's just rename this file to gz ```$mv data data.gz``` ungzip it ```$gzip -d data.gz```. You will get a file named data.
+
+```$file data```
+```data: bzip2 compressed data, block size = 900k```
+
+Repeat the process
+```$mv data data.bz2```
+```$bzip2 -d data.gz```
+
+```$file data```
+```data: gzip compressed data, was "data4.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix
+```
+
+```$mv data data.gz```
+```$gzip -d data.gz```
+
+```$file data```
+```data: POSIX tar archive (GNU)```
+
+```$mv data data.tar```
+```$tar xvf data.tar```
+
+```$file data5.bin```
+```data5.bin: POSIX tar archive (GNU)```
+
+```$mv data5.bin data5.tar```
+```$tar xvf data5.tar```
+
+```$file data6.bin```
+```data6.bin: bzip2 compressed data, block size = 900k```
+
+```$mv data6.bin data6.bz2```
+```$bzip2 -d data6.bz2```
+
+```$file data6```
+```data6: POSIX tar archive (GNU)```
+
+```$mv data6 data6.tar```
+```$tar xvf data6.tar```
+
+```$file data8.bin```
+```data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix```
+
+```$mv data8.bin data8.gz```
+```$gzip -d data8.gz```
+
+```$file data8```
+```data8: ASCII text```
+
+Oooof !! Finally You got something let's just do ```$cat data8 quickly``` .... and ...
+
+Ta daah.
+```The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL```
+
+
+Happy Hacking l33t5
+
+
+
+
+
 
