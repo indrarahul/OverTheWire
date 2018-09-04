@@ -10,3 +10,9 @@
 
 > Helpful Reading Material
 > Hex dump on Wikipedia
+
+## Solution
+
+When we first login using the password you found in last level. You find data.txt in the present directory.
+
+On doing ```bash $file data.txt```  
