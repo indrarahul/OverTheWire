@@ -23,8 +23,7 @@ On doing ``` $file data.txt``` we get ```$data.txt: ASCII text```. Hint is this 
 
 ```$xxd -r data.txt > data```
 
-```$file data```
-
+```$file data```<br>
 ```data: gzip compressed data, was "data2.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix```
 From here it takes time. You basically have to do ```$file file_name``` check the file, rename it and unzip/untar/unbiz2/ungzip using proper tools.
 
