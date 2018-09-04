@@ -35,10 +35,8 @@ so let's just rename this file to gz ```$mv data data.gz``` ungzip it ```$gzip -
 Repeat the process
 ```$mv data data.bz2```<br>
 ```$bzip2 -d data.gz```<br>
-
 ```$file data```<br>
-```data: gzip compressed data, was "data4.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix
-```
+```data: gzip compressed data, was "data4.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix```
 <br>
 
 ```$mv data data.gz```<br>
