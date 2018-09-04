@@ -13,7 +13,17 @@
 
 ## Solution
 
-When we first login using the password you found in last level. You find data.txt in the present directory.
+When we first login using the password you found in last level. You find data.txt in the present directory.It was instructed to work in /tmp/any_arbit_dir. So let's just create a new directory and copy this file there.
 
-On doing ```bash
-$file data.txt```  
+```$mkdir /tmp/lvl1213 && cp data.txt /tmp/lvl1213```
+
+now just migrate to the directory ```cd /tmp/lvl1213```
+
+On doing ``` $file data.txt``` we get ```$data.txt: ASCII text```. Hint is this file has been repeatedly compressed and it is a hexdump of it. Let's just reverse hexdump it.
+
+```$xxd -r data.txt > data```
+
+```$file data```
+
+```$data: gzip compressed data, was "data2.bin", last modified: Thu Dec 28 13:34:36 2017, max compression, from Unix```
+
